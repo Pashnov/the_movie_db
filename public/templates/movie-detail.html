@@ -1,0 +1,14 @@
+<h1>Movie detail {{movieId}}</h1>
+
+<div>
+    <p>id = {{movie.id}}</p>
+    <p>name = {{movie.name}}</p>
+    <p>rating = {{movie.rating}}</p>
+    <p></p>
+    <input type="button" class="button btn-success" ng-click="showFavoriteList()" value="Add to Favorite"/>
+    <ul>
+        <li ng-repeat="favorite in favariteList">
+            <a href="" ng-click="addToFavorite(favorite.id, movie.id)">Add to {{favorite.name}}</a>
+        </li>
+    </ul>
+</div>

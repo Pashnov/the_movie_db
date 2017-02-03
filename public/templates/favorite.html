@@ -1,0 +1,18 @@
+<div>
+    <h3>Favorites</h3>
+    <p></p>
+    <ul>
+        <li ng-repeat="favorite in favorites">
+            <p><a href="#!/favorite/list/{{favorite.id}}">{{favorite.name}}</a></p>
+            <ul>
+                <li ng-repeat="movie in favorite.movies">
+                    <p><a href="#!/movies/{{movie.id}}">{{movie.name}}</a></p>
+
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <input type="text" ng-model="nameOfNewFavorite">
+    <input type="button" value="Add new favorite list" ng-click="createFavorite(nameOfNewFavorite)"
+</div>

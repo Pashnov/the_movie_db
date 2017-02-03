@@ -1,0 +1,12 @@
+<div ng-controller="FavoriteListCtrl">
+    <h3>Favorites</h3>
+    <p></p>
+    <p>name of list - {{favorite.name}}</p>
+    <ul>
+        <li ng-repeat="movie in favorite.movies">
+            <p><a href="#!/movies/{{movie.id}}">{{movie.name}}</a></p>
+            <input type="button" class="button btn-danger" ng-click="removeFavorite(favorite.id, movie.id)"
+                   value="Remove from favorite"/>
+        </li>
+    </ul>
+</div>

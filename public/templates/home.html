@@ -1,0 +1,15 @@
+<div class="jumbotron">
+    <h2>The Movie DB</h2>
+    <p>It is a short description about this web app, some text , some text , some text , some text </p>
+</div>
+
+<div>
+    <h3>All movies</h3>
+    <p></p>
+    <p><input type="text" ng-model="query" placeholder="try to type movie"></p>
+    <ul>
+        <li ng-repeat="movie in topMovies | filter:query">
+            <p><a href="#!/movies/{{movie.id}}">{{movie.name}}</a> </p>
+        </li>
+    </ul>
+</div>

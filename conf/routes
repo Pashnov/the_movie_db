@@ -1,0 +1,25 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                                controllers.Application.index
+GET         /register                        controllers.Application.register
+POST        /register                        controllers.Application.registerPost
+
+GET         /top                             controllers.ApplicationRest.getTop(size: Int)
+GET         /detail/:movieId                 controllers.ApplicationRest.getDetail(movieId: Long)
+POST        /addToFavorite                   controllers.ApplicationRest.addToFavoritePost
+GET         /favorite                        controllers.ApplicationRest.favorite
+GET         /favoriteList/:favoriteId        controllers.ApplicationRest.favoriteList(favoriteId: Long)
+POST        /removeFavoriteMovie             controllers.ApplicationRest.removeFavoriteMoviePost
+GET         /showFavoriteList                controllers.ApplicationRest.showFavoriteList
+GET         /createFavorite                  controllers.ApplicationRest.createFavorite(name: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                    controllers.Assets.at(path="/public", file)
+
+#
+# GET   /assets/*file                controllers.Assets.versioned(path = "/public", file: Asset)
+
+    
